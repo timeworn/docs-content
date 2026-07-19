@@ -1,0 +1,12 @@
+{
+    "description": "A bot that syncs GitHub issues to Discord threads.",
+    "icon": "Bot",
+    "root": true,
+    "pages": [
+        "index",
+        "---Setup---",
+        "...setup",
+        "---Guides---",
+        "...guides"
+    ]
+}

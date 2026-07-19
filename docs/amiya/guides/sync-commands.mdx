@@ -1,0 +1,35 @@
+---
+title: Sync Commands
+---
+
+<Callout type="warn">
+  Locking or closing threads will not lock or close the corresponding issue. This is a limitation of the bot and can
+  only be done via commands.
+</Callout>
+
+Amiya provides a set of commands that help sync Discord threads and their respective GitHub issues. These commands gives you more control over the syncing process that aren't provided by Discord's built-in thread management features.
+
+## Locking and Unlocking Threads
+
+You can lock and unlock threads using the following commands:
+
+- `/thread lock <reason>`: Locks the thread and the corresponding GitHub issue given the reason provided.
+- `/thread unlock`: Unlocks the thread and the corresponding GitHub issue.
+
+## Closing and Reopening Threads
+
+You can close and reopen threads using the following commands:
+
+- `/thread close <reason> <duplicate-issue?>`: Closes the thread and the corresponding GitHub issue given the reason provided. If the reason given is "duplicate", you must provide the duplicate issue.
+- `/thread open`: Reopens the thread and the corresponding GitHub issue.
+
+## Linking and Unlinking Threads
+
+<Callout>
+  You can disable auto opening issues for new threads by changing the [settings](./settings.mdx#auto-opening-issues).
+</Callout>
+
+You can manually link and unlink threads from their corresponding GitHub issues using the following commands:
+
+- `/thread link`: Links the thread as a new GitHub issue.
+- `/thread unlink`: Unlinks the thread from the corresponding GitHub issue.

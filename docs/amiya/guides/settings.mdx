@@ -1,0 +1,15 @@
+---
+title: Settings
+---
+
+Amiya provides a set of settings that can be configured to customize the bot's behavior. You can view the available settings by typing `/gitthread settings` in Discord.
+
+## Auto Opening Issues
+
+Amiya automatically opens a GitHub issue for every new thread created. You can disable this feature by typing `/gitthread settings autoopeningissues false` in Discord. This will prevent Amiya from creating issues for new threads and allow you to manage issue creation [manually](./sync-commands.mdx#linking-and-unlinking-threads). You can enable this setting by typing `/gitthread settings autoopeningissues true`.
+
+## Confirmation Messages
+
+Some commands such as `/thread lock`, `/thread unlock`, `/thread close`, and `/thread open` will send a confirmation message before the command is executed. You can disable these messages by typing `/gitthread settings confirmationmessages false` in Discord. You can enable this setting by typing `/gitthread settings confirmationmessages true`.
+
+![](./assets/confirmation-message.png)
