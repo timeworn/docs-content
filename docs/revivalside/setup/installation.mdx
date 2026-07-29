@@ -2,33 +2,55 @@
 title: Installation
 ---
 
-## Installing RevivalSide
+All downloads for RevivalSide are available on the [releases](https://github.com/MadlyMoe/RevivalSide/releases/latest) page on GitHub. Currently, the launcher is only available for Windows and Android. IOS is not supported at this time.
 
-Head over to the [releases](https://github.com/MadlyMoe/RevivalSide/releases/latest) page on GitHub and download the latest version of the launcher. Currently, the launcher is only available for Windows and Android. Once you have downloaded the launcher, run it and follow the prompts to install RevivalSide.
-
-### Windows
+## Windows
 
 <Callout>
   The default installation path is `%localappdata%\RevivalSide`.
 </Callout>
 
-For Windows, download the `RevivalSideSetup.exe` file and run it.
+<Steps>
+<Step>
+
+### Download RevivalSide
+
+Download the `RevivalSideSetup.exe` file from the [releases](https://github.com/MadlyMoe/RevivalSide/releases/latest) page.
 
 ![](./assets/github-page.webp)
 
-Follow the prompts to install RevivalSide.
+</Step>
+<Step>
+
+### Run the Installer
+
+Run the executable file you just downloaded and follow the prompts to install RevivalSide. You can choose whether or not to customize the installation path. If you choose to customize the installation path, make sure to remember where you installed it as this guide uses the default installation path.
 
 ![](./assets/installer.webp)
 
-Once the installation is complete, it should automatically start the RevivalSide launcher.
+</Step>
+<Step>
+
+### Launch the Launcher
+
+Once the installation is complete, it should automatically start the RevivalSide launcher. If it doesn't, you can press the "Launch" button next to "Install" or manually open the launcher from the installation path.
 
 ![](./assets/launcher-games.webp)
 
-Now that you have the launcher installed, before you can play, you need to "freeze" the client. This allows you to play CounterSide offline. To do this, click the hamburger menu next to the "Start Game" button and click "Game Settings".
+</Step>
+<Step>
+
+### Freeze the CounterSide Client
+
+Before you can play CounterSide offline, you need to "freeze" the client. To do this, click the hamburger menu next to the "Start Game" button and click "Game Settings".
 
 ![](./assets/game-settings.webp)
 
-This should open a popup window. From here, find the "CounterSide source client" section and click the "Detect CounterSide" button. This will try to find CounterSide's `Assembly-CSharp.dll` file. If it cannot find it, please press "Browse DLL" and locate the `Assembly-CSharp.dll` file manually. This file is usually located in the `CounterSide\Data\Managed` folder of your CounterSide installation.
+From here, find the "CounterSide source client" section and click the "Detect CounterSide" button. This will try to find CounterSide's `Assembly-CSharp.dll` file. If it cannot find it, please press "Browse DLL" and locate it manually.
+
+<Callout>
+This file is found in the `CounterSide\Data\Managed` folder of your CounterSide installation.
+</Callout>
 
 ![](./assets/select-client.webp)
 
@@ -41,3 +63,6 @@ You can check the progress of "Freeze Selected Client" in the "Logs" tab of the 
 </Callout>
 
 ![](./assets/freeze-progress.webp)
+
+</Step>
+</Steps>

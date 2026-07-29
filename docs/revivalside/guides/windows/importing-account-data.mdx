@@ -2,14 +2,14 @@
 title: Importing Account Data
 ---
 
-This guide will walk you through the process of importing your account data to RevivalSide. You can import your account data in two ways:
+This guide will walk you through the process of importing your account data to RevivalSide. You can import data using one of two methods:
 
-- [From Official Servers](#import-data-from-official-servers)
-- [From JSON](#import-data-from-json)
-
-![](./assets/cross-save.webp)
+- [From Official Servers](#import-data-from-official-servers) - captures login packets from the official servers.
+- [From JSON](#import-data-from-json) - import an existing JSON file.
 
 ## Import Data from Official Servers
+
+In order to import your account data, we need to capture packets from the official servers and extract the information from it. To do this, we will use the "Cross Save" feature in the RevivalSide launcher.
 
 <Steps>
 <Step>
@@ -20,39 +20,43 @@ This guide will walk you through the process of importing your account data to R
 Ensure you have CounterSide closed before starting the packet capture process.
 </Callout>
 
-In order to import your account data, we need to capture packets from the official servers. To do this, head over to the "Cross Save" tab in the RevivalSide launcher and click on the "Start Listening" button. This will start listening for CounterSide related packets.
+Head over to the "Cross Save" tab in the RevivalSide launcher and click on the "Start Capture" button. This will start listening for CounterSide related packets.
+
+![](./assets/start-capture-btn.png)
 
 </Step>
 <Step>
 
-### Login to the Official Servers
+### Login to Counterside
 
 Once you have started listening for packets, login to the offical CounterSide servers. RevivalSide will automatically capture the necessary packets.
 
 </Step>
 <Step>
 
-### Extract and Copy Account Data
+### Import Profile
 
-After logging in, head back to the "Cross Save" tab in the RevivalSide launcher, press "Stop Listening", and click on the "Extract and Copy" button next to it. RevivalSide now try to extract your account data from the captured packets.
+After logging in, head back to the RevivalSide launcher, press "Finish and Export". If it was successful, you should see a `JOIN_LOBBY_ACK-XXXXXXXX.json` file in folder that was opened. Alternatively, you can check the "RESULT" section for the following:
 
-![](./assets/extract-packets.webp)
+![](./assets/capture-success.webp)
 
-You can check whether the extraction was successful by checking the "RESULT" section on the bottom of the "Cross Save" tab. If it was successful, you should see something similar to the following:
+After you have confirmed that the capture was successful, click on the "Import Captured Profile" button and wait for the import to finish. If it was successful, you should see a `users-XXXXXXXX.json` file in the same folder.
 
-![](./assets/extract-packets-success.webp)
+![](./assets/exports-folder.webp)
 
 </Step>
 <Step>
 
-### Launch User Manager
+### (Optional) Verify Imported Data
 
-After importing your account data, you can launch the [User Manager](../../references/user-manager) to ensure your data was imported correctly.
+If you want to verify that your data was imported correctly, you can launch the [User Manager](../../references/user-manager).
 
 </Step>
 </Steps>
 
 ## Import Data from JSON
+
+If you have a JSON file containing account data, you can import it directly into RevivalSide. This is useful if you want to revert to a backup or use someone else's data.
 
 <Steps>
 <Step>
@@ -66,7 +70,7 @@ Open the [User Manager](../../references/user-manager) by clicking on the "User 
 
 ### Import JSON File
 
-Click on the "Import JSON" button on the top right of the User Manager. This will open a file dialog where you can select your JSON file containing your account data.
+Click on the "Import JSON" button on the top right of the User Manager. This will open a file dialog where you can select the JSON file containing the account data you want to import.
 
 ![](./assets/import-json.webp)
 
