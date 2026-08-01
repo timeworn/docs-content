@@ -3,7 +3,8 @@ title: Admin
 ---
 
 <Callout>
-This feature is locked until you clear Episode 1 of the main story as it requires HanaTalk to be unlocked.
+  This feature is locked until you clear Episode 1 of the main story as it
+  requires HanaTalk to be unlocked.
 </Callout>
 
 RevivalSide has a built-in admin commands that allows you to manage the server and give yourself items and units.
@@ -35,21 +36,58 @@ Once HanaTalk is open, click on the message icon next to "Revival Admin" so that
 
 ## Using Commands
 
-In order to use the admin commands, you will need to type them into the chat box in HanaTalk. If you are unsure of what commands are available, you can type `/help` to see a list of all the commands and the parameters they require.
+In order to use the admin commands, you will need to type them into the chat box in HanaTalk. If you are unsure of what commands are available, you can type `/help` to see a list of all the commands you can use.
 
 ![](./assets/command-help.webp)
 
 ### Parameters
 
-Some commands require parameters in order to work. Parameters are additional information that you provide to the command in order to specify what you want it to do. For example, the `/give currency` command requires a parameter for the type of currency (`<credits|eternium|quartz|admincoins|id>`) and the amount you want to give (`<amount>`).
+Some commands require parameters in order to work. Parameters are additional information that you provide to the command in order to specify what you want it to do. For example, the `/give currency` command requires a parameter for the type of currency (`<credits|eternium|quartz|admincoins|id>`) and the amount you want to give (`<count>`).
 
-Unfortunately, the parameters listed in the `/help` command do not follow a consistent format, but they are the same. For example, with the `/give` command, `<count>` and `[count]` both mean the same thing, which is the amount of the item you want to give. The same goes for `<type|type2>` and `type|type2`, which both mean the type of item you want to give.
+#### Rules
 
-### Examples
+- `<angle brackets>` indicate a required parameter.
+- `[square brackets]` indicate an optional parameter.
+- `[flag=value]` indicates an optional flag that has a default value if not specified.
+- `[flag=name:value]` indicates an optional flag with a name and a value.
+- `|` indicates a choice between multiple options.
+- `...` indicates that you can repeat the previous parameter multiple times.
+- Optional parameters may be given positionally. Once you use `flag=value` syntax, all subsequent parameters must also use `flag=value` syntax.
 
-- `/give currency credits 1000` - Gives you 1000 credits.
-- `/give skin 104206` - Gives you the skin with the ID of 104206.
-- `/clear` - Clears your mail/inbox.
+#### Examples
+
+<Callout>
+  The following command does not exist and is only used for clarification
+  purposes.
+</Callout>
+
+```
+/give item <player> <item_id> [rarity=legendary] [level=1] [substat=name:value ...]
+```
+
+Given the command above, the following are valid:
+
+```
+/give item user 1001
+/give item user 1001 legendary 50
+/give item user 1001 legendary level=50
+/give item user 1001 rarity=legendary level=50
+/give item user 1001 level=50 rarity=legendary
+
+/give item user 1001 legendary 50 substat=attack:1000
+/give item user 1001 legendary 50 substat=attack:1000 substat=defense:500
+/give item user 1001 legendary level=50 substat=attack:1000
+/give item user 1001 level=50 rarity=legendary substat=attack:1000
+```
+
+The following are invalid:
+
+```
+/giveitem user
+/giveitem 1001
+/giveitem user 1001 50 legendary
+/giveitem user 1001 level=50 legendary
+```
 
 ## Tips
 
