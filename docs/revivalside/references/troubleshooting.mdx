@@ -1,0 +1,13 @@
+---
+title: Troubleshooting
+---
+
+### Missing Files
+
+When [freezing the client](../setup/installation.mdx#freeze-the-counterside-client), it is possible that some files were not copied correctly. If this happens, you may see ui and other assets missing as shown below:
+
+![](./assets/missing-files.webp)
+
+![](./assets/missing-files-bundles.webp)
+
+In order to fix this, copy the missing files from the `CounterSide` folder into RevivalSide's `frozen-client\CounterSide-XXX` folder. The most common files that are missing are in `frozen-client\CounterSide-XXX\Assetbundles`, if you are missing any files from there, copy it from the `CounterSide\Assetbundles` folder. If you are missing other files, copy them as well.
