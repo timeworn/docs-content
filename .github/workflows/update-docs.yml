@@ -18,21 +18,32 @@ jobs:
           submodules: true
           fetch-depth: 0
           
-      - name: Update Submodule
+      - name: Get submodule
+        run: |
+          SUBMODULE_PATH="$(git config -f .gitmodules --get submodule.content.path)"
+
+          if [ -z "$SUBMODULE_PATH" ]; then
+            echo "Could not find submodule in .gitmodules"
+            exit 1
+          fi
+
+          echo "SUBMODULE_PATH=$SUBMODULE_PATH" >> "$GITHUB_ENV"
+
+      - name: Update submodule
         env:
           CONTENT_SHA: ${{ github.sha }}
         run: |
-          git -C docs-content fetch origin "$CONTENT_SHA"
-          git -C docs-content checkout "$CONTENT_SHA"
+          git -C "$SUBMODULE_PATH" fetch origin main
+          git -C "$SUBMODULE_PATH" checkout --detach "$CONTENT_SHA"
 
-      - name: Commit to Docs
+      - name: Commit to docs
         env:
           CONTENT_SHA: ${{ github.sha }}
         run: |
           git config user.name "${{ vars.DOCS_COMMIT_NAME }}"
           git config user.email "${{ vars.DOCS_COMMIT_EMAIL }}"
 
-          git add docs-content
+          git add "$SUBMODULE_PATH"
 
           if git diff --cached --quiet; then
             echo "No changes"
@@ -63,5 +74,5 @@ jobs:
               --repo timeworn/docs \
               --head staging \
               --base main \
-              --title "chore: update content" \
+              --title "chore: update content"
           fi
