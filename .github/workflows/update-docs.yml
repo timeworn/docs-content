@@ -8,18 +8,60 @@ on:
 jobs:
   update-docs-submodule:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           repository: timeworn/docs
+          ref: staging
           token: ${{ secrets.DOCS_PAT }}
           submodules: true
-
-      - name: Update submodule reference
+          fetch-depth: 0
+          
+      - name: Update Submodule
+        env:
+          CONTENT_SHA: ${{ github.sha }}
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git submodule update --remote --recursive
-          git add -A
-          git commit -m "chore: update content" || echo "No changes to commit"
-          git push
+          git -C docs-content fetch origin "$CONTENT_SHA"
+          git -C docs-content checkout "$CONTENT_SHA"
+
+      - name: Commit to Docs
+        env:
+          CONTENT_SHA: ${{ github.sha }}
+        run: |
+          git config user.name "${{ vars.DOCS_COMMIT_NAME }}"
+          git config user.email "${{ vars.DOCS_COMMIT_EMAIL }}"
+
+          git add docs-content
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "chore: update content to ${CONTENT_SHA::7}"
+          git push origin staging
+
+      - name: Open PR
+        env:
+          GH_TOKEN: ${{ secrets.DOCS_PAT }}
+        run: |
+          EXISTING_PR="$(
+            gh pr list \
+              --repo timeworn/docs \
+              --head staging \
+              --base main \
+              --state open \
+              --json number \
+              --jq '.[0].number // empty'
+          )"
+
+          if [ -n "$EXISTING_PR" ]; then
+            echo "PR #$EXISTING_PR already exists"
+          else
+            gh pr create \
+              --repo timeworn/docs \
+              --head staging \
+              --base main \
+              --title "chore: update content" \
+          fi
