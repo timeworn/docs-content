@@ -74,5 +74,6 @@ jobs:
               --repo timeworn/docs \
               --head staging \
               --base main \
-              --title "chore: update content"
+              --title "chore: update content" \
+              --body ""
           fi
