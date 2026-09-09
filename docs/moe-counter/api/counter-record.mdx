@@ -4,12 +4,12 @@ title: /record/{slug}
 
 ## Overview
 
-The **Counter Record** endpoint returns detailed information about a counter slug. Like the JSON endpoint, this endpoint **does not increment** the counter.
+The **Counter Record** endpoint returns detailed information about a counter slug. Unlike the **Counter JSON** endpoint, this endpoint **does not increment** the counter.
 
 ## Endpoint
 
 ```
-GET /count.timeworn.net/record/{slug}
+GET /record/{slug}
 ```
 
 ## Parameters
@@ -23,18 +23,9 @@ GET /count.timeworn.net/record/{slug}
 
 ### Basic Request
 
-```
-https://count.timeworn.net/record/demo
-```
-
-## Response
-
-Returns a JSON object with detailed information about the counter record:
-
-```json
-{
-  "slug": "demo",
-  "totalCount": 528,
-  "createdAt": "2026-03-10T22:09:15.050Z"
-}
-```
+<ApiPlayground
+  initialUrl="https://count.timeworn.net/record/demo"
+  disableQuery
+  disableHeaders
+  disableBody
+/>

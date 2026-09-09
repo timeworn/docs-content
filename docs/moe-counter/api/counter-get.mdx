@@ -9,7 +9,7 @@ The **Counter JSON** endpoint returns the incremented count and slug in JSON for
 ## Endpoint
 
 ```
-GET /count.timeworn.net/get/{slug}
+GET /get/{slug}
 ```
 
 ## Parameters
@@ -23,17 +23,9 @@ GET /count.timeworn.net/get/{slug}
 
 ### Basic Request
 
-```
-https://count.timeworn.net/get/demo
-```
-
-## Response
-
-Returns a JSON object with the slug and its current count:
-
-```json
-{
-  "slug": "demo",
-  "count": 42
-}
-```
+<ApiPlayground
+  initialUrl="https://count.timeworn.net/get/demo"
+  disableQuery
+  disableHeaders
+  disableBody
+/>

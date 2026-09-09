@@ -9,7 +9,7 @@ The **Counter** endpoint returns an image representation of a counter for a give
 ## Endpoint
 
 ```
-GET /count.timeworn.net/{slug}
+GET /{slug}
 ```
 
 ## Parameters
@@ -23,18 +23,18 @@ GET /count.timeworn.net/{slug}
 
 ### Basic Counter
 
-```
-https://count.timeworn.net/demo
-```
+<ApiPlayground
+  initialUrl="https://count.timeworn.net/demo"
+  disableQuery
+  disableHeaders
+  disableBody
+/>
 
 ### Custom Styling
 
-```
-https://count.timeworn.net/demo?theme=moebooru&padding=10&scale=1.5&darkmode=dark
-```
-
-## Response
-
-Returns an image representing the current count for the specified slug.
-
-<img src="https://count.timeworn.net/demo" alt="Counter Image" />
+<ApiPlayground
+  initialUrl="https://count.timeworn.net/demo?theme=gelbooru&scale=0.8&num=0123456789"
+  disableQuery
+  disableHeaders
+  disableBody
+/>
