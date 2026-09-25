@@ -1,0 +1,5 @@
+{
+  "description": "A API for images and other media",
+  "icon": "Image",
+  "subRoot": true
+}
