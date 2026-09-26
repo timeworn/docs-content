@@ -1,0 +1,49 @@
+---
+title: Images and Videos
+description: Guidelines for media-related content.
+---
+
+Use an image or video when it helps explain something. Media should support the
+instructions, not replace them.
+
+## File Location and Names
+
+Keep media close to the page that uses it. Follow the existing folder structure
+and use either `assets/` or `images/`.
+
+Use kebab-case when naming files:
+
+- `account-link-confirmation.webp`
+- `copy-token-button.png`
+- `browse-local-files.mp4`
+
+Avoid names such as `image1.png` and `screenshot.png`.
+
+## Images
+
+Add images with Markdown:
+
+```mdx
+![](../../revivalside/guides/windows/assets/wiki.webp)
+```
+
+![](../../revivalside/guides/windows/assets/wiki.webp)
+
+## Videos
+
+Use the `Video` component for local videos and links:
+
+```mdx
+<Video src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+```
+
+<Video src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+
+```mdx
+<Video src="../../revivalside/references/assets/browse-local-files.mp4" />
+```
+
+<Video src="../../revivalside/references/assets/browse-local-files.mp4" />
+
+See [Custom Components](../fumadocs/custom-components.mdx#video) for more
+information.

@@ -1,0 +1,73 @@
+---
+title: Tables
+description: Guidelines for creating and using tables.
+---
+
+Tables make it easier to compare information and other related content. However,
+they can be difficult to read on small screens and are not always the best way
+to present information.
+
+## Basic Table
+
+Every table needs a header row and separator row.
+
+```mdx
+| Setting   | Type    | Default |
+| --------- | ------- | ------- |
+| `enabled` | Boolean | `true`  |
+| `limit`   | Number  | `10`    |
+| `name`    | String  | None    |
+```
+
+| Setting   | Type    | Default |
+| --------- | ------- | ------- |
+| `enabled` | Boolean | `true`  |
+| `limit`   | Number  | `10`    |
+| `name`    | String  | None    |
+
+Use the same formatting rules inside a table.
+
+## Keep Tables Simple
+
+Avoid putting paragraphs, code blocks, images, or ordered steps inside a table.
+
+- Use sentence case for column headers.
+- Use short and specific column names.
+- Put units in the header when every value uses the same unit.
+- Use `None`, `N/A`, or another value instead of leaving a cell empty.
+
+## Alignment
+
+Text should normally be left-aligned. Numbers can be right-aligned if it makes
+them easier to compare.
+
+```mdx
+| File         |   Size |
+| ------------ | -----: |
+| `client.zip` | 256 MB |
+| `assets.zip` |  16 GB |
+```
+
+| File         |   Size |
+| ------------ | -----: |
+| `client.zip` | 256 MB |
+| `assets.zip` |  16 GB |
+
+Do not center text unless it is easier to understand.
+
+## Pipes and Line Breaks
+
+Escape a pipe inside a table cell with a backslash:
+
+```mdx
+| Value           | Meaning         |
+| --------------- | --------------- |
+| `true \| false` | A Boolean value |
+```
+
+| Value           | Meaning         |
+| --------------- | --------------- |
+| `true \| false` | A Boolean value |
+
+Avoid line breaks in cells. If a cell has several lines, it probably belongs in
+a list or its own section.

@@ -1,0 +1,91 @@
+---
+title: Code
+description: Guidelines for using code blocks.
+---
+
+Use code blocks for code, commands, configuration, and output with multiple
+lines. Always add the programming language for syntax highlighting.
+
+````mdx
+```ts title="src/example.ts"
+const enabled = true;
+```
+
+```text
+Server ready on port 3000
+```
+````
+
+```ts title="src/example.ts"
+const enabled = true;
+```
+
+```text
+Server ready on port 3000
+```
+
+Syntax highlighting defaults to `text` when no specific language is
+provided. Consider adding a title when the file name or location is useful.
+
+## Commands
+
+Do not add a shell prompt prefix such as `$` or `>` before a command. The reader
+should be able to copy it without removing anything.
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Put separate commands on separate lines. Add a comment if an explanation or
+context is needed.
+
+## Tabs
+
+Use tabs for commands and code when there are multiple ways to do the same
+thing. Use the `tab` attribute to specify the tab name. The first tab will be
+selected by default.
+
+````mdx
+```bash tab="npm"
+npm install
+```
+
+```bash tab="pnpm"
+pnpm install
+```
+````
+
+```bash tab="npm"
+npm install
+```
+
+```bash tab="pnpm"
+pnpm install
+```
+
+## Highlighting Changes
+
+Highlight changes made to an existing file to help the reader understand what
+has changed.
+
+````mdx
+```ts
+const name = "example";
+// [!code ++]
+const enabled = true;
+// [!code --]
+const enabled = false;
+```
+````
+
+```ts
+const name = "example";
+// [!code ++]
+const enabled = true;
+// [!code --]
+const enabled = false;
+```
+
+Do not highlight every line. Highlight only the part that changed or needs
+attention.

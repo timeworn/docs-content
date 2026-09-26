@@ -1,0 +1,14 @@
+{
+  "title": "Contributing",
+  "description": "Contributing to the documentation",
+  "icon": "BookDashed",
+  "root": true,
+  "pages": [
+    "index",
+    "writing",
+    "---Formatting---",
+    "...formatting",
+    "---Fumadocs---",
+    "...fumadocs"
+  ]
+}

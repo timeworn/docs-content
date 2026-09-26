@@ -1,0 +1,51 @@
+---
+title: Links
+description: Guidelines for creating and using links.
+---
+
+Links help readers navigate to related information. Readers should know where a
+link goes before opening it.
+
+| Avoid | Prefer |
+| --- | --- |
+| Click [here](../index.mdx). | Read the [Contributing guide](../index.mdx). |
+| See [this](https://www.fumadocs.dev/docs) for more information. | See the [Fumadocs documentation](https://www.fumadocs.dev/docs) for more information. |
+
+## Internal Links
+
+Use relative links for other pages in the documentation. Include the `.mdx`
+extension in the path.
+
+```mdx
+Read the [Text Formatting guide](./text.mdx).
+```
+
+> Read the [Text Formatting guide](./text.mdx).
+
+Use a heading fragment to link to a section:
+
+```mdx
+See [External Links](./links.mdx#external-links).
+```
+
+> See [External Links](./links.mdx#external-links).
+
+## External Links
+
+Use the full URL for an external website.
+
+```mdx
+Check the [RevivalSide Repository](https://github.com/madlymoe/revivalside) for
+the source code.
+```
+
+> Check the [RevivalSide Repository](https://github.com/madlymoe/revivalside)
+> for the source code.
+
+Do not copy information from another website when a link is more useful and
+easier to keep updated.
+
+## Repeated Links
+
+When a term is mentioned for the first time, link it to a reference if it has
+one. Do not link every mention in the same section.
