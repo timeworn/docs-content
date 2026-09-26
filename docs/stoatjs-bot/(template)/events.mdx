@@ -2,7 +2,9 @@
 title: Events
 ---
 
-In this section, we will go over how to create events for your bot. Events are actions that happen on Stoat. Your bot can "listen" to these events and run code in response. Some common events include:
+In this section, we will go over how to create events for your bot. Events are
+actions that happen on Stoat. Your bot can "listen" to these events and run code
+in response. Some common events include:
 
 - **messageCreate** - Someone sends a message
 - **messageReactionAdd** - Someone reacts to a message
@@ -27,7 +29,8 @@ export default new Event({
 });
 ```
 
-When someone sends a message, the bot will log the username and the content of the message in the console.
+When someone sends a message, the bot will log the username and the content of
+the message in the console.
 
 <Steps>
 <Step>
@@ -66,7 +69,9 @@ export default new Event({
 
 ### Add optional properties
 
-<Callout>We do not need `once: false` because `false` is the default value for `once`.</Callout>
+<Callout>
+  We do not need `once: false` because `false` is the default value for `once`.
+</Callout>
 
 ```ts title="src/events/messageCreateLog.ts"
 import { Event } from "@/classes/event";
@@ -103,7 +108,8 @@ export default new Event({
 
 ### Save the file and test your event
 
-Run your bot and send a message in a server. You should see the message logged in the console.
+Run your bot and send a message in a server. You should see the message logged
+in the console.
 
 ![messageCreate event example](./images/messageCreate-event.png)
 
@@ -112,6 +118,10 @@ Run your bot and send a message in a server. You should see the message logged i
 
 ## Properties
 
-The template provides an `Event` class that you can use to create event handlers. You can find the `Event` class in the `src/classes/Event.ts` file.
+The template provides an `Event` class that you can use to create event
+handlers. You can find the `Event` class in the `src/classes/Event.ts` file.
 
-<AutoTypeTable path="content/docs/(stoatjs-bot)/(template)/interfaces.ts" name="Event" />
+<AutoTypeTable
+  path="content/docs/stoatjs-bot/(template)/interfaces.ts"
+  name="Event"
+/>

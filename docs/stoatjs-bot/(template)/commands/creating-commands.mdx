@@ -3,12 +3,16 @@ title: Creating Commands
 ---
 
 <Callout>
-  This section assumes your prefix is `!`. If you changed your prefix, replace `!` with your actual prefix.
+  This section assumes your prefix is `!`. If you changed your prefix, replace
+  `!` with your actual prefix.
 </Callout>
 
-In this section, we will go over how to create commands for your bot. Commands are the main way users will interact with your bot.
+In this section, we will go over how to create commands for your bot. Commands
+are the main way users will interact with your bot.
 
-The template comes with an example command called `ping`. You can find it in the `src/commands/ping.ts` file. This command will reply with the latency of the bot when a user types `!ping`.
+The template comes with an example command called `ping`. You can find it in the
+`src/commands/ping.ts` file. This command will reply with the latency of the bot
+when a user types `!ping`.
 
 ![ping command example](../getting-started/images/ping-command.png)
 
@@ -31,7 +35,8 @@ export default new Command({
 });
 ```
 
-When someone types `!hello` (or `!hi` or `!hey`), the bot will reply with a greeting.
+When someone types `!hello` (or `!hi` or `!hey`), the bot will reply with a
+greeting.
 
 ![hello command example](./images/hello-command.png)
 
@@ -51,7 +56,10 @@ In `src/commands/`, create a new file called `hello.ts`.
 export default new Command({});
 ```
 
-You might've noticed that when you start typing `new Command`, you get suggestions for the properties you can add. This is called **intellisense**. You can press <kbd>Enter</kbd> or <kbd>Tab</kbd> to quickly add the properties you need.
+You might've noticed that when you start typing `new Command`, you get
+suggestions for the properties you can add. This is called **intellisense**. You
+can press <kbd>Enter</kbd> or <kbd>Tab</kbd> to quickly add the properties you
+need.
 
 ![intellisense](./images/command-intellisense.png)
 
@@ -117,7 +125,8 @@ export default new Command({
 
 ### Save the file and test your command
 
-Run your bot and type `!hello` in a server. The bot should reply with a greeting.
+Run your bot and type `!hello` in a server. The bot should reply with a
+greeting.
 
 ![hello command example](./images/hello-command.png)
 
@@ -126,6 +135,10 @@ Run your bot and type `!hello` in a server. The bot should reply with a greeting
 
 ## Properties
 
-The template provides a `Command` class that you can use to create commands for your bot. You can find the `Command` class in the `src/classes/Command.ts` file.
+The template provides a `Command` class that you can use to create commands for
+your bot. You can find the `Command` class in the `src/classes/Command.ts` file.
 
-<AutoTypeTable path="content/docs/(stoatjs-bot)/(template)/interfaces.ts" name="Command" />
+<AutoTypeTable
+  path="content/docs/stoatjs-bot/(template)/interfaces.ts"
+  name="Command"
+/>

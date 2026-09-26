@@ -2,7 +2,9 @@
 title: Command Groups
 ---
 
-Command groups allow you to organize related commands together. For example, you might have a group called "mod" that contains commands like "kick", "ban", and "mute".
+Command groups allow you to organize related commands together. For example, you
+might have a group called "mod" that contains commands like "kick", "ban", and
+"mute".
 
 ## Creating a Command Group
 
@@ -21,7 +23,8 @@ Create a new folder inside `src/commands/` to group your related commands.
 
 ### Add index.ts
 
-Create an `index.ts` file inside your folder and define the group using the `Command` class.
+Create an `index.ts` file inside your folder and define the group using the
+`Command` class.
 
 ```ts title="src/commands/folder/index.ts"
 import { Command } from "@/classes/command";
@@ -32,7 +35,8 @@ export default new Command({
 ```
 
 <Callout>
-  The `name` property must be left blank (`""`). Unlike actual commands, the name will be inferred from the folder name.
+  The `name` property must be left blank (`""`). Unlike actual commands, the
+  name will be inferred from the folder name.
 </Callout>
 
 </Step>
@@ -49,7 +53,8 @@ Add your command files in the same folder. They will automatically be grouped.
 
 ## Inheritance
 
-Command group settings cascade down through subgroups. Each level can override settings from its parent.
+Command group settings cascade down through subgroups. Each level can override
+settings from its parent.
 
 <Files>
   <Folder name="src/commands" defaultOpen>
@@ -86,10 +91,15 @@ export default new Command({
 ```
 
 - `joke` command: cooldown 5s, User permission (from fun group)
-- `meme` command (in fun/image): cooldown 2s, User permission (from fun group's permission)
+- `meme` command (in fun/image): cooldown 2s, User permission (from fun group's
+  permission)
 
 ## Properties
 
-Command groups use the same properties as the [`Command`](./creating-commands) class.
+Command groups use the same properties as the [`Command`](./creating-commands)
+class.
 
-<AutoTypeTable path="content/docs/(stoatjs-bot)/(template)/interfaces.ts" name="CommandGroup" />
+<AutoTypeTable
+  path="content/docs/stoatjs-bot/(template)/interfaces.ts"
+  name="CommandGroup"
+/>
