@@ -1,0 +1,120 @@
+---
+title: Writing Style
+description: Writing style guide for the docs.
+---
+
+Write for the purpose of helping another person. Do not focus on style alone; a
+page's content is more important.
+
+## Know Your Audience
+
+Before you start, identify your audience. What is their goal and level of
+expertise? A page for a new user should assume little to no prior knowledge,
+while a page for an advanced user can skip basic concepts.
+
+Keep the following in mind:
+
+- Explain what the page helps the reader do.
+- Explain unfamiliar terms the first time they are used.
+- Include details that help the reader choose between different options.
+- Never assume something is easy or obvious.
+
+## Keep It Clear
+
+Use short paragraphs, usually two to four sentences. Longer sentences do not
+always provide more information.
+
+Prefer familiar words. Use **use** instead of **utilize** and **before** instead
+of **prior to**. Not everyone reading the page is a native English speaker.
+
+| Avoid                                               | Prefer                             |
+| --------------------------------------------------- | ---------------------------------- |
+| Simply click the button below to continue.          | Select **Continue**.               |
+| This command can be used in order to remove a role. | Use this command to remove a role. |
+| As you know, the bot needs a token.                 | The bot needs a token.             |
+
+Avoid filler words such as **simply**, **just**, and **obviously**. Also avoid
+speaking for the reader with phrases such as **you'll notice** or **as you
+know**. Humor and idioms can confuse readers and do not always translate well.
+
+## Use Consistent Spelling and Grammar
+
+Grammar and spelling should be consistent across every page.
+
+Use the following rules:
+
+- Use the same name for a feature.
+- Spell out an abbreviation the first time it is used, followed by the
+  abbreviation in parentheses: `Hypertext Markup Language (HTML)`.
+- Use numerals for measurements, versions, and steps.
+- Add a space between a number and its unit: `16 GB`, not `16GB`.
+- Use official product names such as iOS, JavaScript, and GitHub.
+
+## Page Structure
+
+Do not combine a tutorial, concepts, and entire reference on one page. Choose
+the page type that best matches what the reader needs.
+
+### Titles and Headings
+
+Use [title case](https://en.wikipedia.org/wiki/Title_case) for page titles and
+headings.
+
+Headings should explain the content under them. Avoid using vague headings.
+
+Do not add a Level 1 heading (`#`) to an MDX page. Start with Level 2 (`##`) and
+do not skip levels.
+
+### Introductions
+
+The first paragraph should explain the subject and why the page is useful. Do
+not start every page with "This documentation will serve as a guide for X."
+
+### Getting Started Page
+
+A getting started page helps readers find results quickly.
+
+1. State what the reader will accomplish.
+2. List the prerequisites.
+3. Provide the steps.
+4. Link to the next guide.
+
+### How-To Page
+
+A how-to page explains how to complete a specific task.
+
+1. Use a goal-oriented title like **Importing Account Data**.
+2. List prerequisites.
+3. Put actions in chronological order.
+4. Show the expected result.
+
+### Reference Page
+
+A reference page helps readers look up facts. Every section should be
+consistent. Use sections such as syntax, parameters, return values, and examples
+when they apply.
+
+### Troubleshooting Page
+
+Name the problem in the heading. Explain the cause when it is known, give the
+steps to fix it, and show how to confirm that it is fixed.
+
+Include the exact or similar error text when readers are likely to search for
+it. If a troubleshooting page becomes too long, split each problem into its own
+page.
+
+## Referring to UI Elements
+
+Match the capitalization and wording used in the interface. Format labels in
+bold.
+
+- Select **Start Game**.
+- In **Game Settings**, select **Detect CounterSide**.
+- Enter a name in **Repository Name**.
+- Press <kbd>Enter</kbd>.
+
+Use **select** when the input method does not matter. Use **click** for a
+mouse-specific action, **tap** for a touch action, and **press** for a keyboard
+key or physical button.
+
+Do not describe a control only by its color, icon, or location.
