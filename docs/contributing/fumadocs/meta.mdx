@@ -1,0 +1,21 @@
+---
+title: Custom Meta
+description: Custom meta file for folders.
+---
+
+This website extends the `meta.json` file from Fumadocs.
+
+## SubRoot Folders
+
+`subRoot` allows related documentation to be grouped together.
+
+```json title="docs/(api)/(media)/meta.json"
+{
+  "description": "An API for images and other media",
+  "icon": "Image",
+  "subRoot": true
+}
+```
+
+Use `subRoot` on the documentation you want to nest. The parent folder must have
+a `meta.json` with `"root": true` and no MDX files if you use this.

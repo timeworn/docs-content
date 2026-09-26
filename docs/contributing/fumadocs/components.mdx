@@ -1,0 +1,48 @@
+---
+title: Custom Components
+description: Custom components created for the documentation.
+---
+
+This website adds custom components for content that Markdown or Fumadocs cannot
+or may not display well. Below are some components that have been createed.
+
+## Video
+
+`Video` embeds a local video file or a YouTube video.
+
+```mdx
+<Video src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+```
+
+<Video src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+
+<AutoTypeTable
+  path="content/docs/contributing/interfaces.ts"
+  name="VideoProps"
+/>
+
+## API Playground
+
+`ApiPlayground` adds an interactive request builder. Disable fields that the
+endpoint does not use.
+
+```mdx
+<ApiPlayground
+  initialUrl="https://count.timeworn.net/get/demo"
+  disableQuery
+  disableHeaders
+  disableBody
+/>
+```
+
+<ApiPlayground
+  initialUrl="https://count.timeworn.net/get/demo"
+  disableQuery
+  disableHeaders
+  disableBody
+/>
+
+<AutoTypeTable
+  path="content/docs/contributing/interfaces.ts"
+  name="ApiPlaygroundProps"
+/>
